@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMB Flowers</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .flower-option {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        .flower-option img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .flower-details {
+            max-width: 300px;
+        }
+
+        .flower-details h2 {
+            margin: 0 0 10px;
+        }
+
+        .flower-details p {
+            margin: 10px 0;
+        }
+
+        .flower-details input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            margin: 10px 0;
+        }
+
+        .flower-details button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .flower-details button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="cart.html">Cart</a>
+        <a href="favorites.html">Favorites</a>
+    </nav>
+
+    <!-- Home Page Title -->
+    <header>
+        <h1>KMB Flowers</h1>
+        <p>Choose your flowers and add them to your cart</p>
+    </header>
+
+    <!-- Bouquet Section -->
+    <div class="flower-option">
+        <img src="images/bouquet.jpg" alt="Bouquet">
+        <div class="flower-details">
+            <h2>Bouquet</h2>
+            <p>Price: $25.00</p>
+            <label for="bouquet-quantity">Quantity:</label>
+            <input type="number" id="bouquet-quantity" name="bouquet-quantity" value="1" min="1">
+            <br>
+            <button onclick="addToCart('Bouquet', 25, document.getElementById('bouquet-quantity').value)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Marriage Garland Section -->
+    <div class="flower-option">
+        <img src="images/marriage-garland.jpg" alt="Marriage Garland">
+        <div class="flower-details">
+            <h2>Marriage Garland</h2>
+            <p>Price: $40.00</p>
+            <label for="garland-quantity">Quantity:</label>
+            <input type="number" id="garland-quantity" name="garland-quantity" value="1" min="1">
+            <br>
+            <button onclick="addToCart('Marriage Garland', 40, document.getElementById('garland-quantity').value)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Event Decoration Flowers Section -->
+    <div class="flower-option">
+        <img src="images/Event-Decoration-Flowers.jpg" alt="Marriage Garland">
+        <div class="flower-details">
+            <h2>Event Decoration Flowers.jpg</h2>
+            <p>Price: $40.00</p>
+            <label for="Event-Decoration-Flowers.jpg-quantity">Quantity:</label>
+            <input type="number" id="Event-Decoration-Flowers.jpg-quantity" name="Event-Decoration-Flowers.jpg-quantity" value="1" min="1">
+            <br>
+            <button onclick="addToCart('Event Decoration Flowers.jpg', 40, document.getElementById('Event Decoration Flowers.jpg-quantity').value)">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <script>
+        function addToCart(productName, price, quantity) {
+            alert(`${productName} added to cart!\nQuantity: ${quantity}\nTotal Price: $${price * quantity}`);
+        }
+    </script>
+
+</body>
+</html>
+
+
